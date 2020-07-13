@@ -48,11 +48,12 @@ export function* signUp({payload}) {
       name,
       email,
       password,
-      provider: true,
     });
 
     // history.push('/');
   } catch (err) {
+    console.tron.log(err);
+
     Alert.alert(
       'Falha no cadastro',
       'Houve um erro no cadastro, verifique seus dados.'
